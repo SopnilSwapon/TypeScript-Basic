@@ -118,34 +118,78 @@
 
 // }
 // ____________use of classes of typescript_____________ //
-import { func } from 'prop-types';
-import {Player} from './classes/Player.js';
-import {Isplayer} from './interfaces/IsPlayer.js'
-let player1: Isplayer; 
-player1 = new Player('Mashrafi', 40, 'Bangladesh');
-// player1.name = 'Tamim';
-// console.log(player1.name);
-const player2 = new Player('Shakib', 38, 'Bangladesh');
-let players: Isplayer[] = [];
-players.push(player1);
-players.push(player2);
-console.log(players)
+// import { func } from 'prop-types';
+// import {Player} from './classes/Player.js';
+// import {Isplayer} from './interfaces/IsPlayer.js'
+// let player1: Isplayer; 
+// player1 = new Player('Mashrafi', 40, 'Bangladesh');
+// // player1.name = 'Tamim';
+// // console.log(player1.name);
+// const player2 = new Player('Shakib', 38, 'Bangladesh');
+// let players: Isplayer[] = [];
+// players.push(player1);
+// players.push(player2);
+// console.log(players)
 
-//_____________ interface________________//
+// //_____________ interface________________//
 
-interface drawRectangleOptions {
-    width: number;
-    length:  number;
+// interface drawRectangleOptions {
+//     width: number;
+//     length:  number;
+// }
+// function drawRectangle (option: drawRectangleOptions){
+//     let width = option.width;
+//     let length = option.length;
+//     return width * length;
+// }
+// const options = {
+//     width: 30,
+//     length: 18,
+//     height: 40
+// }
+// const result = drawRectangle(options)
+// console.log(result)
+
+//_____________Generics________________//
+// const addId =<T extends {
+//     name: string,
+//     age: number
+// }> (obj: T) =>{
+//     let id = Math.floor(Math.random() * 100);
+//     return {...obj, id}
+// }
+// // const orginalObj = {
+// //     name: 'karim',
+// //     age: 23,
+// //     isStudent: true,
+// //     // country: "bangladesh"
+// // };
+// // const orginalObj = ''
+// const originalObj = addId({
+//     name: 'karim',
+//     age: 23,
+//     isStudent: true,
+//     country: "bangladesh"
+// });
+// // originalObj.country = 'india'
+// console.log(originalObj)
+// // let obj: {
+// //     name: string,
+// //     age: number,
+// // };
+// // obj = {name: 'sayed', age: 23, adult: false};
+// // console.log(obj)
+interface APIResponse <T> {
+    status: number;
+    type: string;
+    data: T;
 }
-function drawRectangle (option: drawRectangleOptions){
-    let width = option.width;
-    let length = option.length;
-    return width * length;
+
+const response1: APIResponse <object> = {
+    status: 200,
+    type: "good",
+    data: {
+        name: 'bangladesh',
+        something: 'good'
+    }
 }
-const options = {
-    width: 30,
-    length: 18,
-    height: 40
-}
-const result = drawRectangle(options)
-console.log(result)

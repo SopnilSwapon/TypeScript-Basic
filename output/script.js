@@ -1,3 +1,4 @@
+"use strict";
 // // console.log('bangladesh')
 // const country = 'I love bangladesh';
 // // console.log(country)
@@ -40,25 +41,11 @@
 //     age: 34,
 //     isStudent: true,
 // a = []
-import { Player } from './classes/Player.js';
-let player1;
-player1 = new Player('Mashrafi', 40, 'Bangladesh');
-// player1.name = 'Tamim';
-// console.log(player1.name);
-const player2 = new Player('Shakib', 38, 'Bangladesh');
-let players = [];
-players.push(player1);
-players.push(player2);
-console.log(players);
-function drawRectangle(option) {
-    let width = option.width;
-    let length = option.length;
-    return width * length;
-}
-const options = {
-    width: 30,
-    length: 18,
-    height: 40
+const response1 = {
+    status: 200,
+    type: "good",
+    data: {
+        name: 'bangladesh',
+        something: 'good'
+    }
 };
-const result = drawRectangle(options);
-console.log(result);
