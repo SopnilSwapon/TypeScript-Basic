@@ -119,12 +119,14 @@
 // }
 // ____________use of classes of typescript_____________ //
 import { func } from 'prop-types';
-import {Player} from './classes/Player.js'
-const player1 = new Player('Mashrafi', 40, 'Bangladesh');
+import {Player} from './classes/Player.js';
+import {Isplayer} from './interfaces/IsPlayer.js'
+let player1: Isplayer; 
+player1 = new Player('Mashrafi', 40, 'Bangladesh');
 // player1.name = 'Tamim';
 // console.log(player1.name);
 const player2 = new Player('Shakib', 38, 'Bangladesh');
-let players: Player[] = [];
+let players: Isplayer[] = [];
 players.push(player1);
 players.push(player2);
 console.log(players)

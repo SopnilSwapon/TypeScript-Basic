@@ -41,7 +41,8 @@
 //     isStudent: true,
 // a = []
 import { Player } from './classes/Player.js';
-const player1 = new Player('Mashrafi', 40, 'Bangladesh');
+let player1;
+player1 = new Player('Mashrafi', 40, 'Bangladesh');
 // player1.name = 'Tamim';
 // console.log(player1.name);
 const player2 = new Player('Shakib', 38, 'Bangladesh');
