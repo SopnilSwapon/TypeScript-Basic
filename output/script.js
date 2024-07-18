@@ -1,4 +1,3 @@
-"use strict";
 // // console.log('bangladesh')
 // const country = 'I love bangladesh';
 // // console.log(country)
@@ -110,16 +109,7 @@
 // }) => {
 // }
 // ____________use of classes of typescript_____________ //
-class Player {
-    constructor(name, age, country) {
-        this.name = name;
-        this.age = age;
-        this.country = country;
-    }
-    play() {
-        console.log(`${this.name} from ${this.country} his age is ${this.age}`);
-    }
-}
+import { Player } from './classes/Player.js';
 const player1 = new Player('Mashrafi', 40, 'Bangladesh');
 // player1.name = 'Tamim';
 // console.log(player1.name);
@@ -127,4 +117,4 @@ const player2 = new Player('Shakib', 38, 'Bangladesh');
 let players = [];
 players.push(player1);
 players.push(player2);
-console.log(players[1]);
+console.log(players);

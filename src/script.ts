@@ -118,23 +118,12 @@
 
 // }
 // ____________use of classes of typescript_____________ //
-// class Player {
-    
-    
-//     constructor(public name: string,
-//         private age: number,
-//         readonly country: string){
-
-//     }
-//     play(){
-//         console.log(`${this.name} from ${this.country} his age is ${this.age}`)
-//     }
-// }
-// const player1 = new Player('Mashrafi', 40, 'Bangladesh');
-// // player1.name = 'Tamim';
-// // console.log(player1.name);
-// const player2 = new Player('Shakib', 38, 'Bangladesh');
-// let players: Player[] = [];
-// players.push(player1);
-// players.push(player2)
-// console.log(players[1])
+import {Player} from './classes/Player.js'
+const player1 = new Player('Mashrafi', 40, 'Bangladesh');
+// player1.name = 'Tamim';
+// console.log(player1.name);
+const player2 = new Player('Shakib', 38, 'Bangladesh');
+let players: Player[] = [];
+players.push(player1);
+players.push(player2);
+console.log(players)
