@@ -179,17 +179,20 @@
 // // };
 // // obj = {name: 'sayed', age: 23, adult: false};
 // // console.log(obj)
+// _______________ENUM TYPE_________________//
+enum Rtype {SUCCESSFUL, FORBIDDEN, UNAUTHENTICATE, FAILURE}
 interface APIResponse <T> {
     status: number;
-    type: string;
+    type: Rtype;
     data: T;
 }
 
 const response1: APIResponse <object> = {
     status: 200,
-    type: "good",
+    type: Rtype.FAILURE,
     data: {
         name: 'bangladesh',
         something: 'good'
     }
-}
+};
+console.log(response1)
