@@ -180,19 +180,22 @@
 // // obj = {name: 'sayed', age: 23, adult: false};
 // // console.log(obj)
 // _______________ENUM TYPE_________________//
-enum Rtype {SUCCESSFUL, FORBIDDEN, UNAUTHENTICATE, FAILURE}
-interface APIResponse <T> {
-    status: number;
-    type: Rtype;
-    data: T;
-}
+// enum Rtype {SUCCESSFUL, FORBIDDEN, UNAUTHENTICATE, FAILURE}
+// interface APIResponse <T> {
+//     status: number;
+//     type: Rtype;
+//     data: T;
+// }
 
-const response1: APIResponse <object> = {
-    status: 200,
-    type: Rtype.FAILURE,
-    data: {
-        name: 'bangladesh',
-        something: 'good'
-    }
-};
-console.log(response1)
+// const response1: APIResponse <object> = {
+//     status: 200,
+//     type: Rtype.FAILURE,
+//     data: {
+//         name: 'bangladesh',
+//         something: 'good'
+//     }
+// };
+// console.log(response1)
+// ________________Tuples_____________________//
+const a:[number, string, number[]] = [3, 'bangladesh', [3, 4, 5]];
+console.log(a)
